@@ -26,7 +26,7 @@ For now, it is hosted at http://paypalmerchant.herokuapp.com/reactbundle
 
 ## Feedback
 
-Please feel free to reach out to 
+Please feel free to reach out to DL-PP-nativexo@paypal.com
 
 
 
