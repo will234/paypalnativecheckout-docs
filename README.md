@@ -33,7 +33,10 @@ https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
 
 Or if you are already handling deep links in your app, give an opportunity for the Paypal SDK to handle it for the deep link you are registering for Paypal nativexo related handling.
 
-* In the view controller which owns the webview add the following:
+* In the view controller which owns the webview init the Paypal SDK and pass 
+   * merchantId: the merchant client id from the developer portal for the app you created
+   * deep link url: The url scheme/universal link that you created for the sdk to talk back and forth to the native backend
+   
 ```
 //ViewController.h
 #import "paypal/PaypalSetup.h"
