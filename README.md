@@ -10,7 +10,7 @@ https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
 
 * Pull down the native-xo ios static library from here
 * Create a merchant app on our developer portal (since we will need the client_id when invoking the Paypal SDK)
-    * Go to https://developer.paypal.com/developer/applications/
+    * Go to [https://developer.paypal.com/developer/applications/](!https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step1.png)
     * Click on `create app`
     * Add a name and finish creating the app. You will see the Merchant client_id generated in the next page.
 * Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment. [Here is how to set it up.](http://www.idev101.com/code/Objective-C/custom_url_schemes.html)
