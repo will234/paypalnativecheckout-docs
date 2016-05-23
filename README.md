@@ -37,6 +37,20 @@ Or if you are already handling deep links in your app, give an opportunity for t
 
 * In your webview's handler add the following (or do appropriately per your apps need, just let the Paypal sdk handle the flow at some point before you return from the handler)
 
+```
+- (BOOL)webView:(UIWebView *)webView
+shouldStartLoadWithRequest:(NSURLRequest *)request
+ navigationType:(UIWebViewNavigationType)navigationType {
+
+    //Listen in on the webview for checkout urls
+    return [PaypalSetup handleCheckoutUrl: (NSURLRequest *) request];
+}
+
+```
+
+Or if you are already handling `shouldStartLoadWithRequest` for your webview, give an opportunity to the PaypalSDK to check for handling specific URLs too. We only capture hermes checkout urls to be able to put up the native checkout experience.
+
+
 ## Where can I pull the latest react-native bundle ?
 
 For now, it is hosted at http://paypalmerchant.herokuapp.com/reactbundle
