@@ -71,11 +71,6 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 Or if you are already handling `shouldStartLoadWithRequest` for your webview, give an opportunity to the PaypalSDK to check for handling specific URLs too. We only capture hermes checkout urls to be able to put up the native checkout experience.
 
-
-## Where can I pull the latest react-native bundle ?
-
-For now, it is hosted at http://paypalmerchant.herokuapp.com/reactbundle
-
 ## Do you have a sample app that I can checkout the integration on ?
 
 https://github.paypal.com/nativexo/nativexo-webview-sample
