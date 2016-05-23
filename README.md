@@ -9,7 +9,8 @@ https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
 ### App Setup Instructions:
 
 * Pull down the native-xo ios static library from here
-* Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment
+* Create a merchant app on our developer portal (since we will need the client_id when invoking the Paypal SDK)
+* Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment. Instructions are [here](http://www.idev101.com/code/Objective-C/custom_url_schemes.html)
 * Run `pod install` in your app
 
 ### Code Changes:
