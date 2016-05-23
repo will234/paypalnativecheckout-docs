@@ -34,9 +34,8 @@ Or if you are already handling deep links in your app, give an opportunity for t
 //ViewController.m
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"Opening the webview");
-    NSString *fullURL = @"http://kailypaypalbt.mybigcommerce.com/";
+
+    NSString *fullURL = @"https://your-merchant-site.com";
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [_viewWeb loadRequest:requestObj];
