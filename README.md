@@ -24,7 +24,7 @@ For now, it is hosted at http://paypalmerchant.herokuapp.com/reactbundle
 
 ## Do you have a sample app that I can checkout the integration on ?
 
-## Feedback
+## Feedback / Questions
 
 Please feel free to reach out to DL-PP-nativexo@paypal.com
 
