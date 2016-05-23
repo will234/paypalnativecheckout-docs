@@ -1,26 +1,34 @@
 # Nativexo-Integration- WIKI
 
-## What do i need to do to integrate into my app ?
+## Demo on Sandbox with a Bigcommerce sample merchant using the webview intercept model
+
+https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
+
+## What do I need to do to get this great experience in my App ?
 
 ### App Setup Instructions:
 
-1) Pull down the native-xo ios static library from here
-2) Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment
-3) run `pod install` in your app
+* Pull down the native-xo ios static library from here
+* Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment
+* Run `pod install` in your app
 
 ### Code Changes:
 
-1) In your app delegate add the following
-2) In your 
-
-
-## Where can I pull the static iOS sdk to be integrated into my merchant app ?
-
-For now you can pull it from here.
+* In your App delegate add the following
+* In the view controller which owns the webview add the following
+* In your webview's handler add the following (or do appropriately per your apps need, just let the Paypal sdk handle the flow at some point before you return from the handler)
 
 ## Where can I pull the latest react-native bundle ?
 
 For now, it is hosted at http://paypalmerchant.herokuapp.com/reactbundle
+
+## Do you have a sample app that I can checkout the integration on ?
+
+## Feedback
+
+Please feel free to reach out to 
+
+
 
 
 
