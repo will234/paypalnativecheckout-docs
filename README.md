@@ -24,11 +24,15 @@ https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
 }
 ```
 
-Or if you are already handling deep links in your app, give an opportunity for the Paypal SDK to handle it once you are done with your App deep link handling checks
+Or if you are already handling deep links in your app, give an opportunity for the Paypal SDK to handle it for the deep link you are registering for Paypal nativexo related handling.
 
 * In the view controller which owns the webview add the following:
 ```
+//ViewController.h
+#import "paypal/PaypalSetup.h"
 
+//ViewController.m
+[PaypalSetup init: _viewWeb];
 ```
 
 * In your webview's handler add the following (or do appropriately per your apps need, just let the Paypal sdk handle the flow at some point before you return from the handler)
