@@ -41,7 +41,7 @@ Or if you are already handling deep links in your app, give an opportunity for t
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [_viewWeb loadRequest:requestObj];
     _viewWeb.delegate = self;
-    //Paypal Setup 2:
+
     // init the paypal view inside the controller
     // that  needs native checkout
     [PaypalSetup init: _viewWeb];
