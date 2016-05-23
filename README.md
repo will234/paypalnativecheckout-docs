@@ -42,15 +42,16 @@ Or if you are already handling deep links in your app, give an opportunity for t
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *fullURL = @"https://your-merchant-site.com";
-    NSURL *url = [NSURL URLWithString:fullURL];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [_viewWeb loadRequest:requestObj];
-    _viewWeb.delegate = self;
+    ...
+    ...
+    ....
+    ...
 
     // init the paypal view inside the controller
     // that  needs native checkout
-    [PaypalSetup init: _viewWeb];
+       [PaypalSetup init: _viewWeb
+               url:@"wvmerchant://paypal/authorize"
+               merchantId:@"AfI9K9SL-OMYew-EBUzO8ExuWp6FM8d-v-iRdQXDL-JnsotNF88Jf8tepB6rOtNnHUjtM2Tzz70xLnd"];
     
 }
 ```
