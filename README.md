@@ -32,7 +32,21 @@ Or if you are already handling deep links in your app, give an opportunity for t
 #import "paypal/PaypalSetup.h"
 
 //ViewController.m
-[PaypalSetup init: _viewWeb];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"Opening the webview");
+    NSString *fullURL = @"http://kailypaypalbt.mybigcommerce.com/";
+    NSURL *url = [NSURL URLWithString:fullURL];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [_viewWeb loadRequest:requestObj];
+    _viewWeb.delegate = self;
+    //Paypal Setup 2:
+    // init the paypal view inside the controller
+    // that  needs native checkout
+    [PaypalSetup init: _viewWeb];
+    
+}
 ```
 
 * In your webview's handler add the following (or do appropriately per your apps need, just let the Paypal sdk handle the flow at some point before you return from the handler)
