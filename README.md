@@ -50,7 +50,7 @@ end
 
 Or if you are already handling deep links in your app, give an opportunity for `paypal-xo` sdk to handle, for the deep link you are registering specifically for native checkout related handling (as called out in the previous section).
 
-#### 2. In the view controller which owns the webview 
+#### 2. In the view controller which owns the webview: 
 Initialize the paypal sdk by passing:
    * *webview*: reference to the webview in your view controller
    * *merchant_client_Id*: the merchant client id from the developer portal for the app you created
@@ -78,10 +78,11 @@ Initialize the paypal sdk by passing:
     
 }
 ```
+This lets the sdk communicate the merchants identity and the way, merchant's app can get communicated back from Paypal servers.
 
-#### 3. In the webview delegate
+#### 3. In the webview delegate:
 
-Add the following (or do appropriately per your app's setup). This lets the Paypal sdk intercept the webview and put up the  native-checkout experience.
+Add the following (or do appropriately per your app's prior setup). This lets the `paypal-xo` sdk intercept the webview and put up the  native-checkout experience.
 
 ```
 - (BOOL)webView:(UIWebView *)webView
@@ -94,7 +95,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 ```
 
-Or if you are already handling `shouldStartLoadWithRequest` for your webview, give an opportunity to the PaypalSDK to check for handling specific URLs too. We only capture hermes checkout urls to be able to put up the native checkout experience.
+Or if you are already handling `shouldStartLoadWithRequest` for your webview, give an opportunity to the `paypal-xo` to check for handling specific URLs too. We only capture hermes checkout urls to be able to put up the native checkout experience.
 
 ## Do you have a sample app that I can checkout the integration on ?
 
