@@ -38,7 +38,7 @@ end
 
 ### 3-step Code Change:
 
-#### In your App delegate:
+#### 1. In your App delegate:
 ```
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 
@@ -50,7 +50,7 @@ end
 
 Or if you are already handling deep links in your app, give an opportunity for the Paypal SDK to handle it for the deep link you are registering for Paypal nativexo related handling.
 
-#### In the view controller which owns the webview 
+#### 2. In the view controller which owns the webview 
 Initialize the paypal sdk by passing:
    * *webview*: reference to the webview in your view controller
    * *merchant_client_Id*: the merchant client id from the developer portal for the app you created
@@ -79,7 +79,7 @@ Initialize the paypal sdk by passing:
 }
 ```
 
-#### In the webview delegate
+#### 3. In the webview delegate
 
 Add the following (or do appropriately per your app's setup). This lets the Paypal sdk intercept the webview and put up the  native-checkout experience.
 
