@@ -98,7 +98,7 @@ Or if you are already handling `shouldStartLoadWithRequest` for your webview, gi
 
 ## Do you have a sample app that I can checkout the integration on ?
 
-https://github.paypal.com/nativexo/nativexo-webview-sample
+https://github.paypal.com/nativexo/webview-sample
 
 ## Feedback / Questions
 
