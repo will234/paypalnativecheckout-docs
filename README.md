@@ -8,7 +8,25 @@ https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
 
 ### App Setup Instructions:
 
-* Pull down the native-xo ios static library from here
+* In you iOS application (which uses a webview to embed an experience), add the following to your `Podfile`
+```
+
+target '<fill-in-your-app-target>' do
+pod 'paypal-xo', :git => 'git@github.paypal.com:nativexo/paypal-xo-ios.git'
+
+pod 'React', :git => 'git@github.com:facebook/react-native.git', :tag => 'v0.19.0', :subspecs => [
+'Core',
+'RCTText',
+'RCTWebSocket',
+'RCTImage',
+'RCTNetwork',
+'RCTActionSheet',
+'RCTLinkingIOS',
+'RCTImage'
+]
+end
+```
+* Do `pod install`
 * Create a merchant app on our developer portal (since we will need the client_id when invoking the Paypal SDK)
     * Go to https://developer.paypal.com/developer/applications/
     ![Developer portal](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step1.png)
