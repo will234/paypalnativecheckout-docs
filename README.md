@@ -78,7 +78,9 @@ Initialize the paypal sdk by passing:
     
 }
 ```
-This lets the sdk communicate the merchants identity and the way, merchant's app can get communicated back from Paypal servers.
+This sets up the sdk to be able to 
+* put the webview back in the merchant page once a purchase is complete
+* communicate from Paypal servers back into the iOS app.
 
 #### 3. In the webview delegate:
 
