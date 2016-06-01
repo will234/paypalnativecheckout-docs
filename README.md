@@ -48,7 +48,7 @@ end
 }
 ```
 
-Or if you are already handling deep links in your app, give an opportunity for the Paypal SDK to handle it for the deep link you are registering for Paypal nativexo related handling.
+Or if you are already handling deep links in your app, give an opportunity for `paypal-xo` sdk to handle, for the deep link you are registering specifically for native checkout related handling.
 
 #### 2. In the view controller which owns the webview 
 Initialize the paypal sdk by passing:
