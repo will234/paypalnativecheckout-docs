@@ -8,7 +8,7 @@ https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
 
 ### App Setup Instructions:
 
-* In you iOS application (which uses a webview to embed an experience), add the following to your `Podfile`
+* In you iOS application, add the following to your `Podfile`
 ```
 
 target '<fill-in-your-app-target>' do
