@@ -43,7 +43,7 @@ end
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 
 {
-    return [PaypalSetup openURL: (UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation];
+    return [paypal_xo openURL: (UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation];
     
 }
 ```
@@ -72,7 +72,7 @@ Initialize the paypal sdk by passing:
 
     // init the paypal view inside the controller
     // that  needs native checkout
-       [PaypalSetup init: _viewWeb
+       [paypal_xo init: _viewWeb
                url:@"<your_uri_scheme_here>" //example: wvmerchant://paypal/authorize
                merchantId:@"<your_app_client_id>"]; //example: AfI9K9SL-OMYew-EBUzO8ExuWp6FM8d-v-iRdQXDL-JnsotNF88Jf8tepB6rOtNnHUjtM2Tzz70xLnd
     
@@ -89,7 +89,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
  navigationType:(UIWebViewNavigationType)navigationType {
 
     //Listen in on the webview for checkout urls
-    return [PaypalSetup handleCheckoutUrl: (NSURLRequest *) request];
+    return [paypal_xo handleCheckoutUrl: (NSURLRequest *) request];
 }
 
 ```
