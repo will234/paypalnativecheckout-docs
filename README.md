@@ -1,4 +1,4 @@
-# Nativexo-Integration- WIKI [WORK IN PROGRESS!!!!!!!!!!!!!!!!!]
+# Nativexo-Integration- WIKI 
 
 ## Demo on Sandbox with a Bigcommerce sample merchant using the webview intercept model
 
