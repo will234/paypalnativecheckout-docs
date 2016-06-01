@@ -52,8 +52,10 @@ Or if you are already handling deep links in your app, give an opportunity for t
 
 #### In the view controller which owns the webview 
 Initialize the paypal sdk by passing:
+   * *webview*: reference to the webview in your view controller
    * *merchant_client_Id*: the merchant client id from the developer portal for the app you created
    * *deep link url*: The url scheme/universal link that you created for the sdk to talk back and forth to the native backend
+   
    
 ```
 //ViewController.h
