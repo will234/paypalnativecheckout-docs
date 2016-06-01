@@ -36,7 +36,7 @@ end
     ![Add app](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step3.png)
 * Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment. [Here is how to set it up.](http://www.idev101.com/code/Objective-C/custom_url_schemes.html)
 
-### Code Changes:
+### 3-step Code Change:
 
 #### In your App delegate:
 ```
@@ -71,8 +71,8 @@ Initialize the paypal sdk by passing:
     // init the paypal view inside the controller
     // that  needs native checkout
        [PaypalSetup init: _viewWeb
-               url:@"wvmerchant://paypal/authorize"
-               merchantId:@"AfI9K9SL-OMYew-EBUzO8ExuWp6FM8d-v-iRdQXDL-JnsotNF88Jf8tepB6rOtNnHUjtM2Tzz70xLnd"];
+               url:@"<your_uri_scheme_here>" //example: wvmerchant://paypal/authorize
+               merchantId:@"<your_app_client_id>"]; //example: AfI9K9SL-OMYew-EBUzO8ExuWp6FM8d-v-iRdQXDL-JnsotNF88Jf8tepB6rOtNnHUjtM2Tzz70xLnd
     
 }
 ```
