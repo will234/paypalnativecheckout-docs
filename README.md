@@ -35,7 +35,6 @@ end
     * You will see the Merchant client_id generated in the next page. 
     ![Add app](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step3.png)
 * Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment. [Here is how to set it up.](http://www.idev101.com/code/Objective-C/custom_url_schemes.html)
-* Run `pod install` in your app
 
 ### Code Changes:
 
