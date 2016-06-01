@@ -97,7 +97,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 ```
 
-Or if you are already handling `shouldStartLoadWithRequest` for your webview, give an opportunity to the `paypal-xo` to check for handling specific URLs too. We only capture hermes checkout urls to be able to put up the native checkout experience.
+Or if you are already handling `shouldStartLoadWithRequest` for your webview, give an opportunity to the `paypal-xo` to check for handling specific URLs too. We only capture and act on hermes checkout urls to intercept and put up the native checkout experience.
 
 ## Do you have a sample app that I can checkout the integration on ?
 
