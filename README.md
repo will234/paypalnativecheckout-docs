@@ -110,7 +110,7 @@ Or if you are already handling `shouldStartLoadWithRequest` for your webview, gi
 https://github.paypal.com/nativexo/webview-sample
 
 ## How do I test it ?
-The experience around auth and consent is not yet built. That is independent of the integration steps. This whole experience expects oneTouch cookie to be present in the browser. SO, in order to see it working end to end, on your simulator or phone:
+The experience around auth and consent is not yet built. That is independent of the integration steps. This whole experience expects oneTouch cookie to be present in the browser. In order to see it working end to end, on your simulator or phone:
 
 * Go to https://www.sandbox.paypal.com/signin/inject-iframe-test
 * Login with your sandbox user credentials and enable `Stay logged in for faster checkout	`
