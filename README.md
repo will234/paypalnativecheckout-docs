@@ -2,6 +2,8 @@
 
 This integration sets up end-to-end native checkout experience on the Sandbox environment for en-US locale.
 
+![Sequence](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/Native-Sequence.png)
+
 ## Demo on Sandbox with a Bigcommerce sample merchant using the webview intercept model
 
 https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
