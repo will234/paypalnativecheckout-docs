@@ -1,4 +1,4 @@
-# Native checkout integration for Webview merchants 
+# Native checkout integration (iOS only) for Webview merchants 
 
 ## Demo on Sandbox with a Bigcommerce sample merchant using the webview intercept model
 
