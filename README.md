@@ -1,6 +1,6 @@
 # Native checkout integration (iOS only) for Webview merchants 
 
-This integration demonstrates end-to-end native checkout experience on the Sandbox environment for en-US locale.
+This integration sets up end-to-end native checkout experience on the Sandbox environment for en-US locale.
 
 ## Demo on Sandbox with a Bigcommerce sample merchant using the webview intercept model
 
@@ -106,6 +106,15 @@ Or if you are already handling `shouldStartLoadWithRequest` for your webview, gi
 ## Do you have a sample app that I can checkout the integration on ?
 
 https://github.paypal.com/nativexo/webview-sample
+
+## How do I test it ?
+The end to end experience around auth and consent is not yet built. That is independent of the integration steps. This whole experience expects oneTouch cookie to be present in the browser. SO 
+
+* Go to https://www.sandbox.paypal.com/signin/inject-iframe-test
+* Login with your sandbox user credentials and enable `Stay logged in for faster checkout	`
+* Now launch your merchant app, add something to your cart and click on the Paypal checkout button. You must see the native checkout experince. 
+* Click on `Pay Now` button and you should see the payment go through successfully and the webview should load the merchant's redirect url.
+
 
 ## Feedback / Questions
 
