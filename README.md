@@ -114,7 +114,7 @@ The experience around auth and consent is not yet built. That is independent of 
 
 * Go to https://www.sandbox.paypal.com/signin/inject-iframe-test
 * Login with your sandbox user credentials and enable `Stay logged in for faster checkout	`
-* Now launch your merchant app, add something to your cart and click on the Paypal checkout button. You must see the native checkout experince. 
+* Now launch your merchant app, add something to your cart and click on the Paypal checkout button. You must see the native checkout payment sheet. 
 * Click on `Pay Now` button and you should see the payment go through successfully and the webview should load the merchant's redirect url.
 
 
