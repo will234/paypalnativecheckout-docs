@@ -1,5 +1,7 @@
 # Native checkout integration (iOS only) for Webview merchants 
 
+This integration demonstrates end-to-end native checkout experience on the Sandbox environment for en-US locale.
+
 ## Demo on Sandbox with a Bigcommerce sample merchant using the webview intercept model
 
 https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
@@ -27,7 +29,7 @@ pod 'React', :git => 'git@github.com:facebook/react-native.git', :tag => 'v0.19.
 end
 ```
 * Do `pod install`
-* Create a merchant app on our developer portal (since we will need the client_id when invoking the Paypal SDK)
+* Create a merchant app on our developer portal (since we will need the client_id when invoking the Paypal SDK).
     * Go to https://developer.paypal.com/developer/applications/
     ![Developer portal](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step1.png)
     * Add a name  and click on `create app` 
@@ -35,6 +37,7 @@ end
     * You will see the Merchant client_id generated in the next page. 
     ![Add app](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step3.png)
 * Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment. [Here is how to set it up.](http://www.idev101.com/code/Objective-C/custom_url_schemes.html)
+Actual integration requires universal links instead of url schemes. So if you already have that setup for your merchant app, lets use that for deep integration instead of url schemes.
 
 ### 3-step Code Change:
 
