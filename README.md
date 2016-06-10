@@ -36,8 +36,9 @@ end
     ![Create App](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step2.png)
     * You will see the Merchant client_id generated in the next page. 
     ![Add app](https://github.paypal.com/nativexo/nativexo-integration-Wiki/blob/master/step3.png)
-* Setup a deep link url for allowing Paypal to pass back and forth data to our server side while making a Paypal payment. [Here is how to set it up.](http://www.idev101.com/code/Objective-C/custom_url_schemes.html)
-Actual integration requires universal links instead of url schemes. So if you already have that setup for your merchant app, lets use that for deep integration instead of url schemes.
+* Setup deep linking using Universal Links. If you donot have that setup on your app yet, use url schemes. This will be used for allowing Paypal to pass back and forth data to our server side. [Here is how to set it up.](http://www.idev101.com/code/Objective-C/custom_url_schemes.html)
+
+NOTE: The preferred way is to use Universal Links. If you have this setup already please let us know as we donot have a sample app with Universal links and have tested it only with url schemes.
 
 ### 3-step Code Change:
 
