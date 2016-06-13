@@ -14,6 +14,7 @@ https://paypal.box.com/s/yhcjwh9xaxvaxo9hi177ki0vg18ebjfe
 
 * In you iOS application, add the following to your `Podfile`
 ```
+platform :ios, '7.0'
 
 target '<fill-in-your-app-target>' do
 pod 'paypal-xo', :git => 'git@github.paypal.com:nativexo/paypal-xo-ios.git'
