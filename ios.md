@@ -16,14 +16,16 @@ For detailed version history please see our [Change Log](changelog.md).
 
 * [Getting Started](#getting-started)
 * [Obtaining a PayPal Client ID](#paypal-client-id)
-    * [CocoaPods]()
-    * [Carthage]()
-    * [Direct Download]()
-* [Integrating the SDK]()
-    * [Setting Up an iOS Deep Link]()
-* [Invoking  the PayPal Native Checkout SDK]()
-    * [Quick / Auto Integration]()
-    * [Manual Integration]()
+    * [CocoaPods](#cocoapods)
+    * [Carthage](#carthage)
+    * [Direct Download](#direct-download)
+* [Integrating the SDK](#integratingthe-checkout-experience)
+    * [**Integration Type**: WebView Store](#webview-store)
+        * [Setting Up an iOS Deep Link](#setting-up-deep-linking)
+        * [Setup SDK Required Settings](#setting-up-sdk-parameters)
+* [Invoking  the PayPal Native Checkout SDK](#invoking-the-sdk)
+    * [Quick / Auto Integration](#quick-auto-integration)
+    * [Manual Integration](#manual-integration)
 
 # 
 
@@ -36,7 +38,7 @@ The PayPal Native SDK is available through `CocoaPods` `Carthage` and as a stand
 
 ### PayPal Client ID
 
-Before you start, you should have already obtained a PayPal Client ID from the PayPal Developer portal. If you haven't done that step yet, please stop here, and follow the directions in our [Obtaining a PayPal Client ID]() docs.
+Before you start, you should have already obtained a PayPal Client ID from the PayPal Developer portal. If you haven't done that step yet, please stop here, and follow the directions in our [Obtaining a PayPal Client ID](how_to_merchantid.md) docs.
 
 # 
 
@@ -59,7 +61,7 @@ github "PayPal/PayPalNativeXO" >= 1.0.0
 ```
 # 
 
-### .Framework
+### Direct Download
 
 If you would simply like to get started with the PayPal Native Checkout SDK immediately, and do not utilize any package managers above, you can simply download our built `.Framework` file from out [GitHub](https://www.google.com) repository.
 
@@ -81,7 +83,7 @@ After importing the PayPal Native Checkout SDK from one of the packaged options 
 # 
 
 
-### Adding information to our PList File.
+### Setting Up Deep Linking.
 Setting up a Deep Link return, so that PayPal can let your app know, that payment has been completed or cancelled. Here is how we can add a `URI Scheme` for our application using `XCode` 7 and 8. 
 
 You can modify and paste the `XML` structure below into your `Info.plist`
@@ -104,7 +106,7 @@ This allows iOS to send Links and other URL requests that go to `wvmerchant://` 
 
 If you would like to read more about `URI Schemes` and setting them up using the `XCode` interface, you can read more about it on [iDev101](http://www.idev101.com/code/Objective-C/custom_url_schemes.html).
 
-# 
+### Setting up SDK Parameters
 Now we need to add some values, that the PayPal Native Checkout SDK will use to facilitate the checkout process. You can copy and paste the two `XML` value pairs from the box below. Change the items in the `[]` square brackets, to represent the values you set prior to this step. 
 
 ```
