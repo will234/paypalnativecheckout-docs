@@ -44,7 +44,7 @@ Before you start, you should have already obtained a PayPal Client ID from the P
 
 Simply add `paypal-xo` to your `Podfile` , and execute the `pod install` command on your project directory. 
 
-```
+```ruby
 pod 'paypal-xo', '~> 1.0.0’
 ```
 # 
@@ -54,7 +54,7 @@ pod 'paypal-xo', '~> 1.0.0’
 Getting started with Carthage is easy, simply add our public `paypal-xo` repository to your Carthage file, and run `carthage update`. Our `.Framework` will be available for you to import into `XCode`.
 
 
-```
+```bash
 github "PayPal/PayPalNativeXO" >= 1.0.0
 ```
 # 
@@ -131,7 +131,7 @@ The SDK will listen for URL request to PayPal checkout, and intercept them. Inst
 
 To Invoke Auto Mode, importing the SDK header and Initializing the SDK from the `main.m` file is all that is needed. Here is an example of code you can add to your application's `main.m` file.
 
-``` c
+```c
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
@@ -166,7 +166,7 @@ Incase you didn't want to, or are having problem with the Quick/Auto method, you
 
 Add PayPal Native Checkout SDK the `application:openURL:` signature of your `AppDelegate.m` file. This is common amongst other SDKs like Facebook, and Twitter.
  
-``` c
+```c
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     return [[PYPLCheckout sharedInstance] openURL: (UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation];
@@ -180,7 +180,7 @@ This gives an opportunity for the PayPal Native Checkout SDK to handle, the deep
 
 Tell the PayPal Native Checkout SDK what `UIWebView` it should use.
    
-```
+```c
 //ViewController.h
 #import <PayPalXO/PYPLCheckout.h>
 
@@ -209,7 +209,7 @@ The PayPal Native Checkout SDK needs to be setup to intercept URL requests that 
 
 
 
-```
+```c
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest (NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
 
     // Listen in on the webview for checkout urls
