@@ -19,12 +19,12 @@ For detailed version history please see our [Change Log](changelog.md).
     * [CocoaPods](#cocoapods)
     * [Carthage](#carthage)
     * [Direct Download](#direct-download)
-* [Integrating the SDK](#integratingthe-checkout-experience)
+* [Integrating the SDK](#integrating-the-checkout-experience)
     * [**Integration Type**: WebView Store](#webview-store)
         * [Setting Up an iOS Deep Link](#setting-up-deep-linking)
         * [Setup SDK Required Settings](#setting-up-sdk-parameters)
 * [Invoking  the PayPal Native Checkout SDK](#invoking-the-sdk)
-    * [Quick / Auto Integration](#quick-auto-integration)
+    * [Quick / Auto Integration](#quickauto-integration)
     * [Manual Integration](#manual-integration)
 
 # 
