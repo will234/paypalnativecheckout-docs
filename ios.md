@@ -44,10 +44,10 @@ Before you start, you should have already obtained a PayPal Client ID from the P
 
 ### CocoaPods
 
-Simply add `paypal-xo` to your `Podfile` , and execute the `pod install` command on your project directory. 
+Simply add `paypal-nativecheckout` to your `Podfile` as a git repo for the developer preview, and execute the `pod install` command on your project directory. This will link the `NativeCheckout.framework` against your project.
 
 ```ruby
-pod 'paypal-xo', '~> 1.0.0’
+pod ‘paypal-nativecheckout’, :git => 'git@github.com:paypal/paypalcheckout-ios.git', :branch => 'master'
 ```
 # 
 
