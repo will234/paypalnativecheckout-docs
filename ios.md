@@ -63,7 +63,7 @@ github "PayPal/PayPalNativeXO" >= 1.0.0
 
 ### Direct Download
 
-If you would simply like to get started with the PayPal Native Checkout SDK immediately, and do not utilize any package managers above, you can simply download our built `.Framework` file from out [GitHub](https://www.google.com) repository.
+If you would simply like to get started with the PayPal Native Checkout SDK immediately, and do not utilize any package managers above, you can simply download our built `.Framework` file from out [GitHub Here](https://github.com/paypal/paypalcheckout-ios/raw/master/NativeCheckout.framework.zip) repository.
 
 # 
 
