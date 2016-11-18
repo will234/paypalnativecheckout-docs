@@ -32,7 +32,7 @@ For detailed version history please see our [Change Log](changelog.md).
 ## Getting Started
 
 
-The PayPal Native SDK is available through `CocoaPods` `Carthage` and as a standalone `.Framework` for `XCode`. Please note that the Framework shipped in our current preview for all platforms is currently a `Fat Binary` and can not be directly submitted to the App Store without being Stripped of Simulator bits. 
+The PayPal Native SDK is available through `CocoaPods` `Carthage` and as a standalone `.Framework` for `XCode`. Please note that the Framework shipped in our current preview in the `Frameworks` folder is `Fat Binary` and can not be directly submitted to the App Store without being Stripped of Simulator bits, please use the `Zip` archive in the [direct download](#direct-download) for a arm/arm64 only build.
 
 This SDK ships with React Native. If you are currently using React Native in your application, it will likely collide. Please reach out to us, we'd love to work with you while we sandbox React Native away from the SDK.
 
