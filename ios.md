@@ -197,11 +197,24 @@ Incase you didn't want to, or are having problem with the Quick/Auto method, you
 
 Add PayPal Native Checkout SDK the `application:openURL:` signature of your `AppDelegate.m` file. This is common amongst other SDKs like Facebook, and Twitter.
  
+#### objective-c 
 ```c
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     return [[PYPLCheckout sharedInstance] openURL: (UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation];
 }
+```
+
+#### swift
+
+```swift
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        let instance:PYPLCheckout = PYPLCheckout.sharedInstance() as! PYPLCheckout;
+        let wasHandled:Bool = instance.openURL(application, open: url as URL, sourceApplication: sourceApplication as String!, annotation: annotation);
+        
+        return wasHandled
+    }
 ```
 
 This gives an opportunity for the PayPal Native Checkout SDK to handle, the deep links you are registered in the prior section while editing the `Info.plist` file.
@@ -210,7 +223,8 @@ This gives an opportunity for the PayPal Native Checkout SDK to handle, the deep
 
 
 Tell the PayPal Native Checkout SDK what `UIWebView` it should use.
-   
+ 
+#### objective-c 
 ```c
 //ViewController.h
 #import <PayPalXO/PYPLCheckout.h>
@@ -229,6 +243,22 @@ Tell the PayPal Native Checkout SDK what `UIWebView` it should use.
     [[PYPLCheckout sharedInstance] setWebView:(UIWebView*)self.viewWeb];
 }
 ```
+
+#### swift
+```swift
+  override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    	...
+    	...
+    	...
+    	...
+
+        let instance:PYPLCheckout = PYPLCheckout.sharedInstance() as! PYPLCheckout;
+        instance.setWebView(webV);
+    }
+```
+
 This sets up the sdk to be able to 
 * Put the webview back in the merchant page once a purchase is complete
 * Communicate from Paypal servers back into the iOS app.
@@ -237,8 +267,7 @@ This sets up the sdk to be able to
 
 The PayPal Native Checkout SDK needs to be setup to intercept URL requests that are headed to PayPal Checkout on the Web. When the SDK notices these URLs, it will stop the request, and show the approved PayPal Native checkout experience. 
 
-
-
+#### objective-c
 
 ```c
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest (NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
@@ -248,6 +277,16 @@ The PayPal Native Checkout SDK needs to be setup to intercept URL requests that 
     return [[PYPLCheckout sharedInstance] handleIfPPCheckout: (NSURLRequest *) request];
 }
 
+```
+
+#### swift
+
+```swift
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        let instance:PYPLCheckout = PYPLCheckout.sharedInstance() as! PYPLCheckout;
+        let wasHandled:Bool = instance.handleIfPPCheckout(request as URLRequest!);
+        return wasHandled
+    }
 ```
 
 That's it, you are now ready to [Test]() the integration with your application. 
