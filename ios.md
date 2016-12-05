@@ -32,8 +32,10 @@ For detailed version history please see our [Change Log](changelog.md).
         * [Setting Up an iOS Deep Link](#setting-up-deep-linking)
         * [Setup SDK Required Settings](#setting-up-sdk-parameters)
 * [Invoking  the PayPal Native Checkout SDK](#invoking-the-sdk)
+    * [Swift](#swift-integration)
     * [Quick / Auto Integration](#quickauto-integration)
     * [Manual Integration](#manual-integration)
+    
 
 # 
 
@@ -134,6 +136,23 @@ That's it, we've got all the information for the SDK into the Appliation's `Info
 
 As of PayPal Native Checkout SDK version `1.0.0` , there are two options available for integration. 
 
+#### Swift Integration
+
+The integration methods below are designed to work with Objective-C applications. If you have a Swift application and would like to integration, please follow these steps, otherwise you can move on to reviewing [Quick / Auto Integration](#quickauto-integration) and  [Manual Integration](#manual-integration).
+
+* Obtain a copy of the NativeCheckout.framework, [Direct Download of Release](https://github.com/paypal/paypalcheckout-ios/raw/master/NativeCheckout.framework.zip) 
+* Copy unpack the archive, and copy `NativeCheckout.framework` to the root of your Swift project.
+* Import the Framework dependency in XCode using the Build Phases menu option in the Project Properties panes. 
+* ![Build Phases](https://cloud.githubusercontent.com/assets/328000/20902669/f8124d0e-baec-11e6-94c3-15d3dd42e89d.png)
+* Create a `new` header file. (File > New File > Header File)
+	* File Name PYPLCheckoutBridge.
+	* [Example Header File](https://raw.githubusercontent.com/paypal/paypalcheckout-ios/master/PYPLCheckoutBridge.h) 
+* Add a reference to the Bridging Header under Build Phase > Header Search Paths
+* ![Build Phase Header Bridge](https://cloud.githubusercontent.com/assets/328000/20902889/046dbf92-baee-11e6-989a-8d843dff014c.png)
+	* If the Framework was copied to the root of your project directory, the path to the header files would be `$(PROJECT_DIR)/NativeCheckout.framework/Headers`
+
+PayPal NativeCheckout is now ready to be integrated with your application. You may now proceede to  [Manual Integration](#manual-integration) to complete the integration process.
+
 #### Quick/Auto Integration
 In quick integration  mode, the SDK will wrap (swizzle) itself around your application. This allows you to focus on other things, and get the integration of PayPal out of the way. 
 
@@ -232,7 +251,6 @@ The PayPal Native Checkout SDK needs to be setup to intercept URL requests that 
 ```
 
 That's it, you are now ready to [Test]() the integration with your application. 
-
 
 ## Additional Questions, Answers, or just plain need help?
 
