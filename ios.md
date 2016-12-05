@@ -142,8 +142,8 @@ The integration methods below are designed to work with Objective-C applications
 
 * Obtain a copy of the NativeCheckout.framework, [Direct Download of Release](https://github.com/paypal/paypalcheckout-ios/raw/master/NativeCheckout.framework.zip) 
 * Copy unpack the archive, and copy `NativeCheckout.framework` to the root of your Swift project.
-* Import the Framework dependency in XCode using the Build Phases menu option in the Project Properties panes. 
-* ![Build Phases](https://cloud.githubusercontent.com/assets/328000/20902669/f8124d0e-baec-11e6-94c3-15d3dd42e89d.png)
+* Import the Framework dependency as an `Embedded Binary` in XCode using the General menu option in the Project Properties panes. 
+* ![General](https://cloud.githubusercontent.com/assets/328000/20905298/0ae19eca-baf8-11e6-9a04-6014c389bc61.png)
 * Create a `new` header file. (File > New File > Header File)
 	* File Name PYPLCheckoutBridge.
 	* [Example Header File](https://raw.githubusercontent.com/paypal/paypalcheckout-ios/master/PYPLCheckoutBridge.h) 
