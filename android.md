@@ -71,6 +71,12 @@ $ npm init
 $ npm install --save react react-native
 ```
 
+Not using npm? You can use git to clone the React-Native source to the root of your project directory as well. Keep in mind to change the path in the Maven directory step below.
+
+```
+git clone https://github.com/facebook/react-native.git react-native
+```
+
 In your app's build.gradle file add the React Native dependency:
 
 ```
@@ -87,6 +93,7 @@ allprojects {
         ...
         maven {
             // All of React Native (JS, Android binaries) is installed from npm
+            // If you used Git instead of NPM, change this path
             url "$rootDir/../node_modules/react-native/android"
         }
     }
