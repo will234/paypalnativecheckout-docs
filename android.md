@@ -27,11 +27,9 @@ For detailed version history please see our [Change Log](changelog.md).
     * [Direct Download](#direct-download)
 * [Integrating the SDK](#integrating-the-checkout-experience)
     * [**Integration Type**: WebView Store](#webview-store)
-        * [Setting Up an iOS Deep Link](#setting-up-deep-linking)
-        * [Setup SDK Required Settings](#setting-up-sdk-parameters)
+        * [Setting Up Deep Linking and Settings](#setting-up-deep-linking-and-sdk-setup)
 * [Invoking  the PayPal Native Checkout SDK](#invoking-the-sdk)
     * [Integration](#manual-integration)
-    
 
 # 
 
