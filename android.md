@@ -134,7 +134,7 @@ As of PayPal Native Checkout SDK version `1.0.0` :
 
 In the activity that has the `WebView` that you want to be intercepted,
 
-```
+```java
 import com.paypal.paypal_xo_android.paypalxo;
 
 ...
