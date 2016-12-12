@@ -75,6 +75,7 @@ Not using npm? You can use git to clone the React-Native source to the root of y
 
 ```
 git clone https://github.com/facebook/react-native.git react-native
+cd react-native && git checkout v0.32.1
 ```
 
 In your app's build.gradle file add the React Native dependency:
