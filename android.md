@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## Additional Questions, Answers, or just plain need help?
 
-If you have more questions than answered in this guide, please head over to our [FAQ]() section. Hopefully the question you have has already been answered there. 
+If you have more questions than answered in this guide, please head over to our [FAQ](faq.md) section. Hopefully the question you have has already been answered there. 
 
-If you need more help, please reach out to our PayPal Native Checkout SDK team. You can do so by filing a support request on our [Github Page]().
+If you need more help, please reach out to our PayPal Native Checkout SDK team. You can do so by filing a support request on our [Github Page](https://github.com/paypal/paypalcheckout-android).
 
