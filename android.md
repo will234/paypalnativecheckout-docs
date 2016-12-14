@@ -68,7 +68,7 @@ The PayPal Native Checkout SDK relies on Facebook's React Native to add React Na
 
 ```bash
 $ npm init
-$ npm install --save react react-native
+$ npm install --save react react-native@0.32
 ```
 
 Not using npm? You can use git to clone the React-Native source to the root of your project directory as well. Keep in mind to change the path in the Maven directory step below.
@@ -78,12 +78,15 @@ git clone https://github.com/facebook/react-native.git react-native
 cd react-native && git checkout v0.32.1
 ```
 
-In your app's build.gradle file add the React Native dependency:
+In your app's build.gradle file add the React Native, and required dependencies:
 
 ```
 dependencies {
     ...
-    compile "com.facebook.react:react-native:0.32"
+    compile 'com.facebook.react:react-native:0.32'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:customtabs:23.3.0+'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }
 ```
 
