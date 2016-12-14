@@ -151,7 +151,7 @@ The integration methods below are designed to work with Objective-C applications
 * ![Build Phase Header Bridge](https://cloud.githubusercontent.com/assets/328000/20902889/046dbf92-baee-11e6-989a-8d843dff014c.png)
 	* If the Framework was copied to the root of your project directory, the path to the header files would be `$(PROJECT_DIR)/NativeCheckout.framework/Headers`
 
-PayPal NativeCheckout is now ready to be integrated with your application. You may now proceede to  [Manual Integration](#manual-integration) to complete the integration process.
+PayPal NativeCheckout is now ready to be integrated with your application.
 
 #### Quick/Auto Integration
 In quick integration  mode, the SDK will wrap (swizzle) itself around your application. This allows you to focus on other things, and get the integration of PayPal out of the way. 
@@ -162,6 +162,7 @@ The SDK will listen for URL request to PayPal checkout, and intercept them. Inst
 
 To Invoke Auto Mode, importing the SDK header and Initializing the SDK from the `main.m` file is all that is needed. Here is an example of code you can add to your application's `main.m` file.
 
+#### objective-c
 ```c
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
@@ -181,6 +182,26 @@ int main(int argc, char * argv[]) {
     }
 }
 
+```
+
+#### swift
+
+To use auto mode, we need to remove some of the magic that Swift does when wiring an application. Remove `@UIApplicationMain` from the top of AppDelegate.swift, and create a new Swift class file, called `main.swift`, copy the following code into the `main.swift` file.
+
+```swift
+import Foundation
+
+PYPLCheckout.initWithDelegate(AppDelegate.self)
+
+UIApplicationMain(
+    CommandLine.argc,
+    UnsafeMutableRawPointer(CommandLine.unsafeArgv)
+        .bindMemory(
+            to: UnsafeMutablePointer<Int8>.self,
+            capacity: Int(CommandLine.argc)),
+    nil,
+    NSStringFromClass(AppDelegate.self)
+)
 ```
 
 The PayPal  Native Checkout SDK needs to be Initialized before the `UIApplicationMain` is executed. It is during this routine, that Delegated System methods are wired. 
