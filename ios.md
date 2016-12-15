@@ -138,7 +138,7 @@ As of PayPal Native Checkout SDK version `1.0.0` , there are two options availab
 
 #### Swift Integration
 
-If you have a Swift application and would like to integration, please follow these steps, otherwise you can move on to reviewing [Quick / Auto Integration](#quickauto-integration) and  [Manual Integration](#manual-integration).
+If you have a Swift application and would like to intergrate please follow these additional steps, otherwise you can move on to reviewing [Quick / Auto Integration](#quickauto-integration) and  [Manual Integration](#manual-integration).
 
 * Obtain a copy of the NativeCheckout.framework, [Direct Download of Release](https://github.com/paypal/paypalcheckout-ios/raw/master/NativeCheckout.framework.zip) 
 * Copy unpack the archive, and copy `NativeCheckout.framework` to the root of your Swift project.
@@ -211,7 +211,7 @@ That's it, you are now ready to [Test]() the integration with your application.
 
 #### Manual Integration
 
-Incase you didn't want to, or are having problem with the Quick/Auto method, you can integrate manually into your application using the three steps below.
+You can integrate manually into your application using the three steps below.
 
 
 #### 1. Add Application Level URI handling 
