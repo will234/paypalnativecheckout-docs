@@ -69,7 +69,7 @@ Getting started with Carthage is easy, simply add our public `paypal-xo` reposit
 
 
 ```bash
-github "PayPal/PayPalNativeXO" >= 1.0.0
+github "paypal/paypalcheckout-ios" >= 1.0.0
 ```
 # 
 
