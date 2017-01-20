@@ -147,7 +147,7 @@ If you have a Swift application and would like to intergrate please follow these
 * Create a `new` header file. (File > New File > Header File)
 	* File Name PYPLCheckoutBridge.
 	* [Example Header File](https://raw.githubusercontent.com/paypal/paypalcheckout-ios/master/PYPLCheckoutBridge.h) 
-* Add a reference to the Bridging Header under Build Phase > Header Search Paths
+* Add a reference to the Bridging Header under Build Settings > Header Search Paths
 * ![Build Phase Header Bridge](https://cloud.githubusercontent.com/assets/328000/20902889/046dbf92-baee-11e6-989a-8d843dff014c.png)
 	* If the Framework was copied to the root of your project directory, the path to the header files would be `$(PROJECT_DIR)/NativeCheckout.framework/Headers`
 
