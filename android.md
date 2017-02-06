@@ -71,7 +71,7 @@ $ npm init
 $ npm install --save react react-native@0.32
 ```
 
-Not using npm? No problem. You can download the compressed folder from [here](https://github.com/paypal/paypalcheckout-android/blob/master/react-native.tar.gz)
+Not using npm? No problem. You can download the compressed react-native module from [here](https://github.com/paypal/paypalcheckout-android/blob/master/react-native.tar.gz)
 
 In your app's build.gradle file add the React Native, and required dependencies:
 
