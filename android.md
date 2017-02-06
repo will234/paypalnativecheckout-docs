@@ -67,8 +67,7 @@ Select the AAR file you downloaded earlier. Android Studio will create a new mod
 The PayPal Native Checkout SDK relies on Facebook's React Native to add React Native to your project use the following steps from the Project root.
 
 ```bash
-$ npm init
-$ npm install --save react react-native@0.32
+$ npm install --save react-native@0.32
 ```
 
 Not using npm? No problem. You can download the compressed react-native module from [here](https://github.com/paypal/paypalcheckout-android/blob/master/react-native.tar.gz)
