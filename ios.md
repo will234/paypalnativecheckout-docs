@@ -317,6 +317,10 @@ func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navi
 
 That's it, you are now ready to [Test]() the integration with your application. 
 
+## Sample App
+
+You can find a sample application with the android SDK integration [here](git@github.com:pvenkatakrishnan/merchant-swift.git). You will need a Sandbox Paypal account which you can create at the [Paypal developer portal](https://developer.paypal.com/)
+
 ## Additional Questions, Answers, or just plain need help?
 
 If you have more questions than answered in this guide, please head over to our [FAQ](faq.md) section. Hopefully the question you have has already been answered there. 
