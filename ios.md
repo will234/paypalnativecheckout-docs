@@ -319,7 +319,7 @@ That's it, you are now ready to [Test]() the integration with your application.
 
 ## Sample App
 
-You can find a sample application with the android SDK integration [here](https://github.com/pvenkatakrishnan/merchant-swift). You will need a Sandbox Paypal account which you can create at the [Paypal developer portal](https://developer.paypal.com/)
+You can find a sample application in Swift with the iOS SDK integration [here](https://github.com/pvenkatakrishnan/merchant-swift). You will need a Sandbox Paypal account which you can create at the [Paypal developer portal](https://developer.paypal.com/)
 
 ## Additional Questions, Answers, or just plain need help?
 
