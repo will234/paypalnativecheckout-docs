@@ -1,6 +1,6 @@
 # Dragons Ahead
 
-This is a development preview, if you are looking to integrate with PayPal today, please see our Developer Documentation Portal for our v.Zero Express Checkout integration, or other options that maybe available to you.
+If you are looking to integrate with PayPal today, please see our Developer Documentation Portal for our v.Zero Express Checkout integration, or other options that maybe available to you.
 
 https://developer.paypal.com/
 
@@ -12,7 +12,7 @@ https://developer.paypal.com/
 
 The PayPal Native Checkout SDK for iOS, provides a simplified way for you to provide a secure and safe payment solution for your apps. 
 
-* **Native Code Current Version** : 1.0.0
+* **Native Code Current Version** : 1.1.0
 * **Experience Bundle Version** : 1.0.0
 * **Experience** : Safari View Controller
 
@@ -59,7 +59,7 @@ Before you start, you should have already obtained a PayPal Client ID from the P
 Simply add `paypal-nativecheckout` to your `Podfile` as a git repo for the developer preview, and execute the `pod install` command on your project directory. This will link the `NativeCheckout.framework` against your project.
 
 ```ruby
-pod ‘paypal-nativecheckout’, :git => 'git@github.com:paypal/paypalcheckout-ios.git', :branch => '1.0.0'
+pod ‘paypal-nativecheckout’, :git => 'git@github.com:paypal/paypalcheckout-ios.git', :tag => '1.1.0'
 ```
 # 
 
@@ -69,7 +69,7 @@ Getting started with Carthage is easy, simply add our public `paypal-xo` reposit
 
 
 ```bash
-github "paypal/paypalcheckout-ios" >= 1.0.0
+github "paypal/paypalcheckout-ios" >= 1.1.0
 ```
 # 
 
@@ -130,15 +130,11 @@ Now we need to add some values, that the PayPal Native Checkout SDK will use to 
 
 That's it, we've got all the information for the SDK into the Appliation's `Info.plist`. All that is left is invoking the SDK.
 
-# 
-
 ### Invoking the SDK 
 
-As of PayPal Native Checkout SDK version `1.0.0` , there are two options available for integration. Quick/Auto and Manual. 
+#### Swift Integration - Special Instructions
 
-#### Swift Integration
-
-If you have a Swift application and would like to intergrate please follow these additional steps, otherwise you can move on to reviewing [Quick / Auto Integration](#quickauto-integration) and  [Manual Integration](#manual-integration).
+If you have a Swift application and would like to intergrate please follow these additional steps, otherwise you can move on to reviewing [Integration Steps](#manual-integration).
 
 * Obtain a copy of the NativeCheckout.framework, [Direct Download of Release](https://github.com/paypal/paypalcheckout-ios/raw/master/NativeCheckout.framework.zip) 
 * Copy unpack the archive, and copy `NativeCheckout.framework` to the root of your Swift project.
@@ -153,63 +149,8 @@ If you have a Swift application and would like to intergrate please follow these
 
 PayPal NativeCheckout is now ready to be integrated with your application.
 
-#### Quick/Auto Integration
-In quick integration  mode, the SDK will wrap (swizzle) itself around your application. This allows you to focus on other things, and get the integration of PayPal out of the way. 
 
-The PayPal Native Checkout SDK will add events to your `AppDelegate` if they are not defined, or it will extend the events that are currently available. In addition the PayPal Native Checkout SDK will add an additional `Delegate` to all of the `UIWebView` instances in your application. 
-
-The SDK will listen for URL request to PayPal checkout, and intercept them. Instead offering a PayPal approved experience, and then returning the Customer back to your application.
-
-To Invoke Auto Mode, importing the SDK header and Initializing the SDK from the `main.m` file is all that is needed. Here is an example of code you can add to your application's `main.m` file.
-
-#### objective-c
-```c
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
-
-// import the paypal native checkout sdk header file
-#import <PayPalXO/PYPLCheckout.h>
-
-int main(int argc, char * argv[]) {
-    @autoreleasepool {
-
-        // initalize the PayPal Checkout SDK, by passing
-        // our AppDelegate class, so that the SDK can swizzle
-        // or impliment missing methods.
-        [PYPLCheckout initWithDelegate: [AppDelegate class]];
-
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
-
-```
-
-#### swift
-
-To use auto mode, we need to remove some of the magic that Swift does when wiring an application. Remove `@UIApplicationMain` from the top of AppDelegate.swift, and create a new Swift class file, called `main.swift`, copy the following code into the `main.swift` file.
-
-```swift
-import Foundation
-
-PYPLCheckout.initWithDelegate(AppDelegate.self)
-
-UIApplicationMain(
-    CommandLine.argc,
-    UnsafeMutableRawPointer(CommandLine.unsafeArgv)
-        .bindMemory(
-            to: UnsafeMutablePointer<Int8>.self,
-            capacity: Int(CommandLine.argc)),
-    nil,
-    NSStringFromClass(AppDelegate.self)
-)
-```
-
-The PayPal  Native Checkout SDK needs to be Initialized before the `UIApplicationMain` is executed. It is during this routine, that Delegated System methods are wired. 
-
-That's it, you are now ready to [Test]() the integration with your application. 
-
-
-#### Manual Integration
+#### Integration Steps
 
 You can integrate manually into your application using the three steps below.
 
@@ -319,7 +260,7 @@ That's it, you are now ready to [Test]() the integration with your application.
 
 ## Sample App
 
-You can find a sample application in Swift with the iOS SDK integration [here](https://github.com/pvenkatakrishnan/merchant-swift). You will need a Sandbox Paypal account which you can create at the [Paypal developer portal](https://developer.paypal.com/)
+You can find a sample application in Swift with the iOS SDK integration [here](https://github.com/pvenkatakrishnan/paypalcheckout-ios-sample). You will need a Sandbox Paypal account which you can create at the [Paypal developer portal](https://developer.paypal.com/)
 
 ## Additional Questions, Answers, or just plain need help?
 
