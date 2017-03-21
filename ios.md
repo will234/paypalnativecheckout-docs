@@ -16,8 +16,6 @@ The PayPal Native Checkout SDK for iOS, provides a simplified way for you to pro
 * **Experience Bundle Version** : 1.0.0
 * **Experience** : Safari View Controller
 
-For detailed version history please see our [Change Log](changelog.md).
-
 # 
 
 ### Table of Contents
