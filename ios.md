@@ -1,6 +1,6 @@
 # Dragons Ahead
 
-If you are looking to integrate with PayPal today, please see our Developer Documentation Portal for our v.Zero Express Checkout integration, or other options that maybe available to you.
+If you are looking to integrate with PayPal today, please see our Developer Documentation Portal for our Braintree SDK Express Checkout integration, or other options that maybe available to you.
 
 https://developer.paypal.com/
 
