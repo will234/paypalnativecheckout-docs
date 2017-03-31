@@ -1,6 +1,6 @@
 # Dragons Ahead
 
-This is a development preview, if you are looking to integrate with PayPal today, please see our Developer Documentation Portal for our v.Zero Express Checkout integration, or other options that maybe available to you.
+If you are looking to integrate with PayPal today, please see our Developer Documentation Portal for our Braintree SDK Express Checkout integration, or other options that maybe available to you.
 
 https://developer.paypal.com/
 
@@ -12,8 +12,8 @@ https://developer.paypal.com/
 
 The PayPal Native Checkout SDK for Android, provides a simplified way for you to provide a secure and safe payment solution for your apps. 
 
-* **Native Code Current Version** : 1.0.0
-* **Experience Bundle Version** : 1.0.0
+* **Native Code Current Version** : 1.1.0
+* **Experience Bundle Version** : 1.1.0
 * **Experience** : Chrome Custom Tab (or) Default browser on your device.
 
 For detailed version history please see our [Change Log](changelog.md).
@@ -92,7 +92,7 @@ allprojects {
         maven {
             // All of React Native (JS, Android binaries) is installed from npm
             // If you used Git instead of NPM, change this path
-            url "$rootDir/node_modules/react-native/android"
+            url "$rootDir/react-native/android"
         }
     }
     ...
@@ -169,14 +169,18 @@ public class MainActivity extends AppCompatActivity {
         final AppCompatActivity selfActivity = this;
         webview.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                // Add PayPal Checkout to verify if it should handle checkout.
-                Boolean shouldPayPalHandle = paypalxo.getInstance().handleIfPaypalXO(url, selfActivity);
-                return shouldPayPalHandle;
+               final Uri uri = Uri.parse(url);
+               return paypalxo.getInstance().handleIfPaypalXO(url, this.activity);
+
+            }
+
+            public void onLoadResource(WebView view, String url) {
+               paypalxo.getInstance().setupxojs();
             }
         });
 
-        // give paypalxo the instance of the webview
-        paypalxo.getInstance().setWebView(webview, this);
+        // set webview and deep link for paypal handling in paypalxo SDK
+        paypalxo.getInstance().setIntegration(paypalxo.IntegrationType.WEBVIEW, webview,this).setDeepLink(res.getString(R.string.paypalxo_deep_link));
     }
 }
 
