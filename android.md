@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            //the following ONLY if your web integration uses the new checkoutjs for Paypal Checkout
             public void onLoadResource(WebView view, String url) {
                paypalxo.getInstance().setupxojs();
             }
