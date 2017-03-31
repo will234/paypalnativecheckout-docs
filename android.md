@@ -135,7 +135,7 @@ If you would like to read more about `URI Schemes` and setting them up using the
 
 ### Invoking the SDK 
 
-As of PayPal Native Checkout SDK version `1.0.0` :
+As of PayPal Native Checkout SDK version `1.1.0` :
 
 In the activity that has the `WebView` that you want to be intercepted,
 
