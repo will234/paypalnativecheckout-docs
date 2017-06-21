@@ -12,7 +12,7 @@ https://developer.paypal.com/
 
 The PayPal Native Checkout SDK for iOS, provides a simplified way for you to provide a secure and safe payment solution for your apps. 
 
-* **Native Code Current Version** : 1.1.0
+* **Native Code Current Version** : 1.2.0
 * **Experience Bundle Version** : 1.0.0
 * **Experience** : Safari View Controller
 
@@ -57,7 +57,7 @@ Before you start, you should have already obtained a PayPal Client ID from the P
 Simply add `paypal-nativecheckout` to your `Podfile` as a git repo for the developer preview, and execute the `pod install` command on your project directory. This will link the `NativeCheckout.framework` against your project.
 
 ```ruby
-pod ‘paypal-nativecheckout’, :git => 'git@github.com:paypal/paypalcheckout-ios.git', :tag => '1.1.0'
+pod ‘paypal-nativecheckout’, :git => 'git@github.com:paypal/paypalcheckout-ios.git', :tag => '1.2.0'
 ```
 # 
 
@@ -67,7 +67,7 @@ Getting started with Carthage is easy, simply add our public `paypal-xo` reposit
 
 
 ```bash
-github "paypal/paypalcheckout-ios" >= 1.1.0
+github "paypal/paypalcheckout-ios" >= 1.2.0
 ```
 # 
 
